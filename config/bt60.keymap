@@ -32,7 +32,7 @@
 
 		layer2 {
 			bindings = <
-				&kp ESC &none &none &none &none &none &none &none &none &none &none &none &none &none &bt BT_CLR
+				&kp ESC &none &none &none &none &none &none &none &none &none &none &INS &PSCRN &none &bt BT_CLR
 				&none &none &none &none &none &none &none &none &none &none &none &none &none &mo 4
 				&kp CAPS &none &none &none &kp C_AL_WWW &none &kp C_PREV &kp C_RW &kp C_PP &kp C_FF &kp C_NEXT &none &none
 				&none &kp C_BRI_DN &kp C_BRI_UP &none &none &none &none &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &none &none
