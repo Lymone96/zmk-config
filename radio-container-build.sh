@@ -15,9 +15,6 @@ cp /config/config/bt60.keymap config/ || exit 1
 # Build firmware
 west build -s zmk/app -b bt60 -- -DZMK_CONFIG="$(pwd)/config"
 
-# Build
-mkdir -p /config/build
-
 # Copy output firmware
 cp build/zephyr/zmk.uf2 /config/build
 
