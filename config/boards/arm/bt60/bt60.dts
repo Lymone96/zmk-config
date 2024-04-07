@@ -8,6 +8,8 @@
 #include <nordic/nrf52840_qiaa.dtsi>
 #include <dt-bindings/zmk/matrix_transform.h>
 
+#include "bt60-pinctrl.dtsi"
+
 / {
 	model = "BT60";
 	compatible = "bt60";
@@ -114,15 +116,17 @@ left_encoder: encoder_left {
 };
 
 &i2c0 {
-	compatible = "nordic,nrf-twi";
-	sda-pin = <17>;
-	scl-pin = <20>;
+    compatible = "nordic,nrf-twi";
+    pinctrl-0 = <&i2c0_default>;
+    pinctrl-1 = <&i2c0_sleep>;
+    pinctrl-names = "default", "sleep";
 };
 
 &uart0 {
 	compatible = "nordic,nrf-uarte";
-	tx-pin = <6>;
-	rx-pin = <8>;
+    pinctrl-0 = <&uart0_default>;
+    pinctrl-1 = <&uart0_sleep>;
+    pinctrl-names = "default", "sleep";
 };
 
 &usbd {
