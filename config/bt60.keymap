@@ -22,7 +22,7 @@
 		hm: homerow_mods {
             		compatible = "zmk,behavior-hold-tap";
             		#binding-cells = <2>;
-            		tapping-term-ms = <400>;
+            		tapping-term-ms = <250>;
             		quick_tap_ms = <0>;
             		flavor = "tap-preferred";
             		bindings = <&kp>, <&kp>;
@@ -36,7 +36,7 @@
 			bindings = <
 				&kp GRAVE &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp BSLH &none &none &bt BT_CLR
 				&kp ESC &kp Q &kp W &kp E &kp R &kp T &kp Y &kp U &kp I &kp O &kp P &bsdl &none &none
-				&kp TAB &kp A &hm LGUI S &hm LALT D &hm LCTRL F &kp G &kp H &hm RCTRL J &hm RALT K &hm RGUI L &kp SEMI &kp ENTER &kp ENTER
+				&kp TAB &hm LSHFT A &hm LALT S &hm LGUI D &hm LCTRL F &kp G &kp H &hm RCTRL J &hm RGUI K &hm RALT L &hm RSHFT SEMI &kp APOS &kp ENTER
 				&kp LSHFT &kp Z &kp X &kp C &kp V &kp B &kp N &kp M &kp COMMA &kp DOT &kp SLASH &kp RSHFT
 				&kp LCTRL &kp LGUI &ltd 2 0 &kp SPACE &ltd 2 1 &none &mo 2 &kp RCTRL
 			>;
@@ -46,10 +46,10 @@
 
 		layer1 {
 			bindings = <
-				&kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12 &none &kp BSPC &bt BT_CLR
+				&kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12 &kp PSCRN &kp BSPC &bt BT_CLR
 				&trans &kp HOME &kp UP &kp END &kp PAGE_UP &none &none &none &none &none &none &trans &none &kp DEL
-				&trans &kp LEFT &kp DOWN &kp RIGHT &kp PAGE_DOWN &none &none &hm RCTRL N0 &hm RALT N0 &hm RGUI N0 &kp APOS &kp ENTER &kp ENTER
-				&trans &none &kp DEL &none &kp LBKT &kp MINUS &kp EQUAL &kp RBKT &trans &trans &trans &trans
+				&trans &kp LEFT &kp DOWN &kp RIGHT &kp PAGE_DOWN &none &none &hm RCTRL N0 &hm RGUI N0 &hm RALT N0 &hm RSHFT N0 &kp ENTER &kp ENTER
+				&trans &none &kp DEL &trans &trans &none &none &none &trans &trans &trans &trans
 				&trans &trans &trans &trans &trans &trans &trans &trans
 			>;
 
@@ -58,9 +58,9 @@
 
 		layer2 {
 			bindings = <
-				&kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12 &none &kp BSPC &bt BT_CLR
-				&trans &kp HOME &none &kp END &kp STAR &kp PLUS &kp MINUS &kp SLASH &kp EQUAL &none &none &bsdl &none &mo 4
-				&trans &kp N1 &hm LGUI N2 &hm LALT N3 &hm LCTRL N4 &kp N5 &kp N6 &hm RCTRL N7 &hm RALT N8 &hm RGUI N9 &kp N0 &kp ENTER &kp ENTER	
+				&none &none &none &none &none &none &none &none &none &none &none &none &none &kp BSPC &bt BT_CLR
+				&trans &kp HOME &none &kp END &kp PLUS &kp STAR &kp SLASH &kp MINUS &kp EQUAL &none &none &bsdl &none &mo 4
+				&trans &hm RSHFT N1 &hm LALT N2 &hm LGUI N3 &hm LCTRL N4 &kp N5 &kp N6 &hm RCTRL N7 &hm RGUI N8 &hm RALT N9 &hm RSHFT N0 &kp ENTER &kp ENTER	
 				&trans &none &kp DEL &none &kp LBKT &kp LPAR &kp RPAR &kp RBKT &trans &trans &trans &trans 
 				&trans &trans &trans &trans &trans &trans &trans &trans
 			>;
